@@ -1,0 +1,94 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans&display=swap" rel="stylesheet">
+    <link rel="icon" type="image" href="log.avif" sizes="32x32">
+    <title>QUIZ QUEST</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>QuizQuest Quiz Platform</h1>
+    </header>
+
+    <main>
+        <!-- Authentication Page -->
+        <section id="auth-page" class="page">
+            <h2>Welcome to the Quiz!</h2>
+            <label for="username">Enter your name:</label>
+            <input type="text" id="username" placeholder="Enter your name">
+            <button onclick="startQuiz()" aria-label="Start Quiz">Start</button>
+        </section>
+
+        <!-- Quiz Selection Page -->
+        <section id="quiz-selection-page" class="page" style="display: none;">
+            <h2>Select a Quiz</h2>
+            <button onclick="selectQuiz('data-structures')" aria-label="Select Data Structures Quiz">Data Structures</button>
+            <button onclick="selectQuiz('databases')" aria-label="Select Databases Quiz">Databases</button>
+            <button onclick="selectQuiz('react')" aria-label="Select React Quiz">React</button>
+            <button onclick="selectQuiz('java')" aria-label="Select Java Quiz">Java</button>
+            <button onclick="goToStudyMaterials()" aria-label="Go to Study Materials">Study Materials</button>
+        </section>
+
+        <!-- Quiz Page -->
+        <section id="quiz-page" class="page" style="display: none;">
+            <h2 id="quiz-title">Quiz Title</h2>
+            <div id="progress-bar">
+                <span style="width: 0%;"></span>
+            </div>
+            <div id="timer">Time Left: <span id="time">15</span> seconds</div>
+            <div id="question-container">
+                <!-- Question and Options will be dynamically inserted here -->
+            </div>
+            <button id="prev-btn" onclick="prevQuestion()" style="display:none;">Back</button>
+            <button id="next-btn" onclick="nextQuestion()">Next</button>
+            <button id="submit-btn" onclick="submitQuiz()" style="display:none;">Submit</button>
+        </section>
+
+       <!-- Study Materials Page -->
+<section id="study-materials-page" class="page" style="display: none;">
+    <h2>Study Materials</h2>
+    <div id="materials-container">
+        <div class="material-item">
+            <h3>Data Structures</h3>
+            <p>Learn about stacks, queues, trees, and graphs.</p>
+            <a href="Data Structures.pdf" class="material-link" target="_blank">Download Data Structures Material</a>
+        </div>
+        <div class="material-item">
+            <h3>Databases</h3>
+            <p>Explore relational databases, SQL, and normalization.</p>
+            <a href="intro_databases.pdf" class="material-link" target="_blank">Download Databases Material</a>
+        </div>
+        <div class="material-item">
+            <h3>React</h3>
+            <p>Understand React components, hooks, and state management.</p>
+            <a href="fullstack-react-book-r14.pdf" class="material-link" target="_blank">Download React Material</a>
+        </div>
+        <div class="material-item">
+            <h3>Java</h3>
+            <p>Learn core Java concepts including OOP and multithreading.</p>
+            <a href="JAVA Programming for the Absolute Beginner - Joseph P Rusell.pdf" class="material-link" target="_blank">Download Java Material</a>
+        </div>
+    </div>
+    <button onclick="goToMainPage()" aria-label="Back to Main Page">Back to Main</button>
+</section>
+
+
+
+        <!-- Result Page -->
+        <section id="result-page" class="page" style="display: none;">
+            <h2 id="result-message">Your Results!</h2>
+            <button onclick="goToMainPage()" aria-label="Back to Main Page">Back to Main</button>
+            <h3>Leaderboard</h3>
+            <div id="leaderboard"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html> 
