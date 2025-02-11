@@ -17,11 +17,11 @@ QuizQuest is a web-based quiz game that allows users to register, select from va
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/quizquest.git
+   git clone https://github.com/Harshithad9/Quiz-App.git
    ```
 
 ## View Demo
-[Click here to view the demo](#) *(Replace with actual demo link)*
+[Click here to view the demo](#) 
 
 ## Contributing
 Contributions are welcome! If you'd like to improve QuizQuest, feel free to fork the repository and submit a pull request.
