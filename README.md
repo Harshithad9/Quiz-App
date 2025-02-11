@@ -21,7 +21,7 @@ QuizQuest is a web-based quiz game that allows users to register, select from va
    ```
 
 ## View Demo
-[Click here to view the demo](#https://quizquestgame.netlify.app) 
+[https://quizquestgame.netlify.app]
 
 ## Contributing
 Contributions are welcome! If you'd like to improve QuizQuest, feel free to fork the repository and submit a pull request.
